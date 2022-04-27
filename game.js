@@ -4,7 +4,7 @@ var userClickedPattern = [];
 var started = false;
 var level = 0;
 
-$(document).keydown("keydown", function(){
+$(document).click("click", function(){
     nextSequence();
     $(document).off();
 });
