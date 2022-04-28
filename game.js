@@ -4,10 +4,8 @@ var userClickedPattern = [];
 var started = false;
 var level = 0;
 
-$(document).click("click", function(){
-    setTimeout(function(){
-        nextSequence();
-    }, 1000)
+$(document).keydown("keydown", function(){
+    nextSequence();
     $(document).off();
 });
 
@@ -35,10 +33,8 @@ function checkAnswer(currentLevel){
         }, 200);
         $("h1").text("Game over! Press any key to play again");
         starOver();
-        $(document).click("click", function(){
-            setTimeout(function(){
-                nextSequence();
-            }, 1000)
+        $(document).keydown("keydown", function(){
+            nextSequence();
             $(document).off();
         });
     }
